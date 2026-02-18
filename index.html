@@ -25,6 +25,9 @@
         }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .event-card {
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 215, 0, 0.1);
@@ -48,19 +51,27 @@
     <nav class="bg-sns-dark/95 backdrop-blur-md sticky top-0 z-50 border-b border-sns-yellow/30 px-6 py-3 shadow-lg">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-4 mb-2 md:mb-0">
-                <!-- Logo Updated to logo.png -->
+                <!-- Logo -->
                 <img src="logo.png" alt="College Logo" class="w-12 h-12 rounded-full object-cover border-2 border-sns-yellow">
                 <div>
                     <h1 class="font-heading text-lg leading-tight tracking-wider text-white">SNS COLLEGE OF TECHNOLOGY</h1>
                     <p class="text-xs text-gray-400">An Autonomous Institution, Coimbatore</p>
                 </div>
             </div>
-            <div class="font-heading text-xl text-sns-yellow tracking-widest">TEXPERIA '26</div>
+            
+            <div class="flex items-center gap-6">
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-6 mr-6 text-sm font-bold uppercase tracking-wider">
+                    <a href="#events-section" class="hover:text-sns-yellow transition-colors">Events</a>
+                    <a href="#workshops-section" class="hover:text-sns-purple transition-colors">Workshops</a>
+                </div>
+                <div class="font-heading text-xl text-sns-yellow tracking-widest border-l pl-6 border-gray-700">TEXPERIA '26</div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-gradient text-white relative overflow-hidden pb-20 pt-16 clip-path-slant">
+    <header class="hero-gradient text-white relative overflow-hidden pb-24 pt-16 clip-path-slant">
         <!-- Abstract Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-sns-purple/20 rounded-full filter blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 left-0 w-64 h-64 bg-sns-yellow/10 rounded-full filter blur-[80px] -translate-x-1/2 translate-y-1/2"></div>
@@ -70,7 +81,7 @@
             <h1 class="text-6xl md:text-8xl font-heading font-bold mb-4 text-white tracking-tight drop-shadow-lg">
                 TEX<span class="text-transparent bg-clip-text bg-gradient-to-r from-sns-purple to-purple-400">PERIA</span><span class="text-sns-yellow">'26</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-10 font-light text-gray-300">Department of CSE (Internet Of Things)</p>
+            <p class="text-xl md:text-2xl mb-10 font-light text-gray-300">Department of Computer Science(IoT, Technology and Design)</p>
             
             <div class="flex flex-col md:flex-row justify-center gap-8 mb-10">
                 <div class="bg-white/5 backdrop-blur-md border-l-4 border-sns-yellow p-5 rounded-r-xl w-full md:w-auto min-w-[200px]">
@@ -79,174 +90,207 @@
                 </div>
                 <div class="bg-white/5 backdrop-blur-md border-l-4 border-sns-purple p-5 rounded-r-xl w-full md:w-auto min-w-[200px]">
                     <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Registration</p>
-                    <p class="text-3xl font-heading text-white">₹400 <span class="text-sm font-body text-gray-400">/ Person</span></p>
+                    <p class="text-3xl font-heading text-white">₹400 <span class="text-sm font-body text-gray-400">/ Person / Day</span></p>
                 </div>
             </div>
 
-            <button onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})" class="group bg-sns-yellow text-black font-bold py-3 px-10 rounded-full hover:bg-yellow-400 transition duration-300 shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:shadow-[0_0_30px_rgba(255,215,0,0.6)]">
-                Explore All Events <i class="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i>
-            </button>
+            <div class="flex justify-center gap-4">
+                <a href="#events-section" class="bg-sns-yellow text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300 shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:shadow-[0_0_30px_rgba(255,215,0,0.6)]">
+                    View Events
+                </a>
+                <a href="#workshops-section" class="bg-transparent border-2 border-sns-purple text-sns-purple font-bold py-3 px-8 rounded-full hover:bg-sns-purple hover:text-white transition duration-300">
+                    View Workshops
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main id="events" class="container mx-auto px-4 py-16 -mt-10 relative z-20">
+    <main class="container mx-auto px-4 py-12 -mt-10 relative z-20">
         
-        <!-- Unified Events Grid -->
-        <div class="mb-16">
+        <!-- ==================== CATEGORY 1: EVENTS ==================== -->
+        <div id="events-section" class="mb-24 scroll-mt-24">
             <div class="flex items-center justify-center mb-12">
-                <div class="w-20 h-1 bg-gradient-to-r from-transparent to-sns-yellow mr-6"></div>
-                <h2 class="text-4xl font-heading font-bold uppercase text-center text-white tracking-wide">Event Lineup</h2>
-                <div class="w-20 h-1 bg-gradient-to-l from-transparent to-sns-purple ml-6"></div>
+                <div class="w-16 md:w-32 h-1 bg-gradient-to-r from-transparent to-sns-yellow mr-6"></div>
+                <div class="text-center">
+                    <span class="block text-sns-yellow text-sm font-bold uppercase tracking-widest mb-1">Category 1</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase text-white tracking-wide">Events</h2>
+                </div>
+                <div class="w-16 md:w-32 h-1 bg-gradient-to-l from-transparent to-sns-purple ml-6"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Paper Presentation -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-sns-yellow"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-yellow-500/10 text-sns-yellow rounded-xl group-hover:bg-sns-yellow group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Tech</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Paper Presentation</h3>
+                    <div class="text-gray-400 text-sm flex-grow space-y-1">
+                        <p><i class="fas fa-microchip text-sns-yellow mr-2"></i>Hardware Domain</p>
+                        <p><i class="fas fa-code text-sns-yellow mr-2"></i>Software Domain</p>
+                    </div>
+                </div>
+
+                 <!-- 2. Adversarial AI -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-green-500/10 text-green-400 rounded-xl group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-robot text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Tech</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Adversarial AI Security</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Security Engineering challenges against AI models.</p>
+                </div>
+
+                <!-- 3. e Sportz -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-pink-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-pink-500/10 text-pink-400 rounded-xl group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Fun</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">e Sportz</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Competitive gaming tournament. Prove your skills.</p>
+                </div>
+
+                <!-- 4. Pitch Your Idea (Formerly Crowd Puller) -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-orange-500/10 text-orange-400 rounded-xl group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Idea</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Strongest Crowd Puller</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Pitch Your Idea: Present your innovative concepts and win over the crowd.</p>
+                </div>
+
+                <!-- 5. Connection -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-teal-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-teal-500/10 text-teal-400 rounded-xl group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-network-wired text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Quiz</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Connection</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Tech Quiz - Connect the dots between concepts.</p>
+                </div>
+
+                <!-- 6. Short Film -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-film text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Creative</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Short Film</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Showcase your cinematic creativity and storytelling.</p>
+                </div>
+
+                <!-- 7. Prompt Designing -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-cyan-500/10 text-cyan-400 rounded-xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-comment-dots text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">AI</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Prompt Designing</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Craft the perfect prompts for GenAI. Unleash creativity.</p>
+                </div>
+
+                <!-- 8. PaintX -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-rose-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-rose-500/10 text-rose-400 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-colors duration-300">
+                            <i class="fas fa-palette text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Art</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">PaintX</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Digital or traditional art competition. Express yourself.</p>
+                </div>
+
+                 <!-- 9. Bug Bounty -->
+                <div class="event-card bg-[#151515] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gray-400"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-gray-700 text-gray-300 rounded-xl group-hover:bg-gray-400 group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-bug text-2xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-500 uppercase">Coding</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">BUG BOUNTY</h3>
+                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">"The Human Compiler" - Find flaws and patch code.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== CATEGORY 2: WORKSHOPS ==================== -->
+        <div id="workshops-section" class="mb-16 scroll-mt-24 bg-[#111111] -mx-4 px-4 py-12 rounded-3xl border border-gray-900/50">
+            <div class="flex items-center justify-center mb-12">
+                <div class="w-16 md:w-32 h-1 bg-gradient-to-r from-transparent to-sns-purple mr-6"></div>
+                <div class="text-center">
+                    <span class="block text-sns-purple text-sm font-bold uppercase tracking-widest mb-1">Category 2</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold uppercase text-white tracking-wide">Workshops</h2>
+                </div>
+                <div class="w-16 md:w-32 h-1 bg-gradient-to-l from-transparent to-sns-yellow ml-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 
                 <!-- Workshop: Streamlit -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group border-t-4 border-t-blue-500">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-laptop-code text-2xl"></i>
                         </div>
+                        <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded text-xs font-bold uppercase">Workshop</span>
                     </div>
                     <h3 class="text-2xl font-bold font-heading mb-2 text-white">Streamlit Workshop</h3>
                     <p class="text-gray-400 text-sm flex-grow leading-relaxed">Master the art of building data apps in minutes using Python and Streamlit.</p>
                 </div>
 
                 <!-- Workshop: ThreatX -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group border-t-4 border-t-red-500">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-red-500/10 text-red-400 rounded-xl group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-shield-alt text-2xl"></i>
                         </div>
+                        <span class="bg-red-900/30 text-red-300 px-2 py-1 rounded text-xs font-bold uppercase">Workshop</span>
                     </div>
                     <h3 class="text-2xl font-bold font-heading mb-2 text-white">ThreatX</h3>
                     <p class="text-gray-400 text-sm flex-grow leading-relaxed">Workshop on Cyber Security: Threats, defense mechanisms, and ethical hacking.</p>
                 </div>
 
                 <!-- Workshop: Gamestorm -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group border-t-4 border-t-purple-500">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-gamepad text-2xl"></i>
                         </div>
+                        <span class="bg-purple-900/30 text-purple-300 px-2 py-1 rounded text-xs font-bold uppercase">Workshop</span>
                     </div>
                     <h3 class="text-2xl font-bold font-heading mb-2 text-white">Gamestorm</h3>
                     <p class="text-gray-400 text-sm flex-grow leading-relaxed">Workshop on Game Design: Mechanics, storytelling, and design logic.</p>
-                </div>
-
-                <!-- Paper Pres -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-sns-yellow"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-yellow-500/10 text-sns-yellow rounded-xl group-hover:bg-sns-yellow group-hover:text-black transition-colors duration-300">
-                            <i class="fas fa-file-alt text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Paper Presentation</h3>
-                    <div class="text-gray-400 text-sm flex-grow space-y-1">
-                        <p><i class="fas fa-check text-green-500 mr-2"></i>Hardware Domain</p>
-                        <p><i class="fas fa-check text-green-500 mr-2"></i>Software Domain</p>
-                    </div>
-                </div>
-
-                 <!-- Adversarial AI -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-green-500/10 text-green-400 rounded-xl group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-robot text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Adversarial AI Security</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Security Engineering challenges against AI models.</p>
-                </div>
-
-                <!-- e Sportz -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-pink-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-pink-500/10 text-pink-400 rounded-xl group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-headset text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">e Sportz</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Competitive gaming tournament. Prove your skills.</p>
-                </div>
-
-                <!-- Crowd Puller -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-orange-500/10 text-orange-400 rounded-xl group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-users text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Strongest Crowd Puller</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Pitch your Idea for our problem.</p>
-                </div>
-
-                <!-- Connection -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-teal-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-teal-500/10 text-teal-400 rounded-xl group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-network-wired text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Connection</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Tech Quiz - Connect the dots between concepts.</p>
-                </div>
-
-                <!-- Short Film -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-film text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Short Film</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Showcase your cinematic creativity and storytelling.</p>
-                </div>
-
-                <!-- Prompt Designing -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-cyan-500/10 text-cyan-400 rounded-xl group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-comment-dots text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Prompt Designing</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Craft the perfect prompts for GenAI. Unleash creativity.</p>
-                </div>
-
-                <!-- PaintX -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-rose-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-rose-500/10 text-rose-400 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-colors duration-300">
-                            <i class="fas fa-palette text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">PaintX</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">Digital or traditional art competition. Express yourself.</p>
-                </div>
-
-                 <!-- Bug Bounty -->
-                <div class="event-card bg-[#1a1a1a] rounded-2xl p-6 flex flex-col h-full relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-gray-400"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 bg-gray-700 text-gray-300 rounded-xl group-hover:bg-gray-400 group-hover:text-black transition-colors duration-300">
-                            <i class="fas fa-bug text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold font-heading mb-2 text-white">Bug Bounty</h3>
-                    <p class="text-gray-400 text-sm flex-grow leading-relaxed">"The Human Compiler" - Find flaws and patch code.</p>
                 </div>
 
             </div>
@@ -257,28 +301,67 @@
             <!-- Background pattern -->
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#FFD700 1px, transparent 1px); background-size: 24px 24px;"></div>
             
-            <h2 class="text-4xl font-heading font-bold mb-8 relative z-10 text-sns-yellow">Grab Your All-Access Pass</h2>
+            <h2 class="text-4xl font-heading font-bold mb-8 relative z-10 text-sns-yellow">Registration</h2>
             
-            <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
-                <div class="bg-white text-black p-8 rounded-2xl w-full md:w-96 transform hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)]">
+            <div class="flex flex-col lg:flex-row justify-center gap-8 relative z-10">
+                
+                <!-- Event Pass Card -->
+                <div class="bg-white text-black p-8 rounded-2xl w-full lg:w-96 transform hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)] flex flex-col">
                     <div class="flex justify-between items-center mb-4 border-b border-gray-200 pb-2">
-                        <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Standard Ticket</span>
-                        <i class="fas fa-ticket-alt text-sns-purple text-xl"></i>
+                        <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Events Pass</span>
+                        <i class="fas fa-ticket-alt text-sns-yellow text-xl"></i>
                     </div>
                     <div class="text-center py-4">
                         <h3 class="text-6xl font-heading font-bold text-sns-dark mb-1">₹400</h3>
                         <p class="text-gray-500 font-medium">Per Person / Per Day</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-200 space-y-2">
-                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-check-circle text-green-500 mr-2"></i> Access to All Events</p>
-                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-check-circle text-green-500 mr-2"></i> Hands-on Workshops</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200 space-y-2 mb-6 flex-grow">
                         <p class="flex items-center text-sm text-gray-700"><i class="fas fa-utensils text-sns-purple mr-2"></i> Food Provided</p>
+                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-certificate text-blue-500 mr-2"></i> Certificates Awarded</p>
                     </div>
-                    <button class="w-full mt-6 bg-sns-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">Register Now</button>
+                    <div class="space-y-3 mt-auto">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScPNnqtanOaShcoSiJ2z6h5flyhVw0PnfbD1iugqn6mQOh5Aw/viewform?usp=sharing&ouid=114549562274475350554" target="_blank" class="block w-full bg-sns-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">
+                            Register for Events
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Workshop Pass Card -->
+                <div class="bg-white text-black p-8 rounded-2xl w-full lg:w-96 transform hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)] flex flex-col">
+                    <div class="flex justify-between items-center mb-4 border-b border-gray-200 pb-2">
+                        <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Workshop Pass</span>
+                        <i class="fas fa-laptop-code text-sns-purple text-xl"></i>
+                    </div>
+                    <div class="text-center py-4">
+                        <h3 class="text-6xl font-heading font-bold text-sns-dark mb-1">₹400</h3>
+                        <p class="text-gray-500 font-medium">Per Person / Workshop</p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200 space-y-2 mb-6 flex-grow">
+                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-check-circle text-green-500 mr-2"></i> Hands-on Training</p>
+                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-utensils text-sns-purple mr-2"></i> Food Provided</p>
+                        <p class="flex items-center text-sm text-gray-700"><i class="fas fa-certificate text-blue-500 mr-2"></i> Certificates Awarded</p>
+                    </div>
+                    <div class="space-y-3 mt-auto">
+                        <button class="w-full bg-gray-300 text-gray-600 font-bold py-3 rounded-lg cursor-not-allowed" disabled>
+                            Link Coming Soon
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Common WhatsApp Link -->
+            <div class="mt-12 relative z-10">
+                <a href="https://chat.whatsapp.com/LIeCSVs0tAQ4xvKuGT7E7t?mode=gi_t" target="_blank" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                    <div class="text-left">
+                        <span class="block text-xs font-normal opacity-90">Join for Updates</span>
+                        <span class="block text-lg leading-none">Official WhatsApp Community</span>
+                    </div>
+                </a>
             </div>
             
-            <p class="mt-8 text-gray-500 italic">"Open for All Branches"</p>
+            <p class="mt-10 text-gray-500 italic">"Open for All Branches"</p>
         </div>
 
     </main>
@@ -288,19 +371,19 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div class="col-span-1 lg:col-span-2">
-                    <h4 class="font-heading text-2xl text-sns-yellow mb-4">Department of CSE (IoT)</h4>
+                    <h4 class="font-heading text-2xl text-sns-yellow mb-4">Department of Computer Science(IoT, Technology and Design)</h4>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-md">SNS College of Technology is an autonomous institution committed to excellence in engineering education and innovation.</p>
                 </div>
                 
                 <div>
-                    <h5 class="font-bold text-white text-sm uppercase tracking-widest mb-4 border-b border-gray-800 pb-2 inline-block">Staff Coordinator</h5>
-                    <p class="text-gray-300">Mr. L. Mubaraali</p>
+                    <h5 class="font-bold text-white text-sm uppercase tracking-widest mb-4 border-b border-gray-800 pb-2 inline-block">Faculty Coordinator</h5>
+                    <p class="text-gray-300">Dr. L. Mubaraali</p>
                 </div>
 
                 <div>
                     <h5 class="font-bold text-white text-sm uppercase tracking-widest mb-4 border-b border-gray-800 pb-2 inline-block">Student Coordinator</h5>
-                    <p class="text-gray-300 mb-1">Mr. </p>
-                    <p class="font-mono text-sns-yellow"><i class="fas fa-phone-alt mr-2 text-xs"></i>+91</p>
+                    <p class="text-gray-300 mb-1">Mr. R. Mohamed Umar</p>
+                    <p class="font-mono text-sns-yellow"><i class="fas fa-phone-alt mr-2 text-xs"></i>8807664706</p>
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
